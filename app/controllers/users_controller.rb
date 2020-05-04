@@ -7,7 +7,6 @@ class UsersController < ApplicationController
         @users = User.all
         render json: @users, include: [:groups]
         # end
-        # redirect_to 'http://localhost:3001'
     end
 
     def show
