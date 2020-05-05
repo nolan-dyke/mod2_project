@@ -1,13 +1,12 @@
 class UsersController < ApplicationController
     def index
-        if (params[:search])
-            @users = User.where("name LIKE ?", "%#{ params[:search] }%" )
-            render json: @users, include: [:groups]
-            # redirect_to 'http://localhost:3001'
-        else
-            @users = User.all
-            render json: @users, include: [:groups]
-        end
+        # if (params[:search])
+        #     @users = User.where({name: params[:search]})
+        #     redirect_to 'http://localhost:3001'
+        # else
+        @users = User.all
+        render json: @users, include: [:groups]
+        # end
     end
 
     def show
