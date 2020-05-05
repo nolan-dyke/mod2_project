@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_04_173910) do
+ActiveRecord::Schema.define(version: 2020_05_05_193945) do
 
   create_table "contents", force: :cascade do |t|
     t.string "message"
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 2020_05_04_173910) do
     t.index ["user_id"], name: "index_joiners_on_user_id"
   end
 
+  create_table "states", force: :cascade do |t|
+    t.string "status"
+    t.integer "user_id", null: false
+    t.integer "content_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["content_id"], name: "index_states_on_content_id"
+    t.index ["user_id"], name: "index_states_on_user_id"
+  end
+
   create_table "thoughts", force: :cascade do |t|
     t.string "comment"
     t.integer "user_id", null: false
@@ -59,6 +69,8 @@ ActiveRecord::Schema.define(version: 2020_05_04_173910) do
   add_foreign_key "contents", "users"
   add_foreign_key "joiners", "groups"
   add_foreign_key "joiners", "users"
+  add_foreign_key "states", "contents"
+  add_foreign_key "states", "users"
   add_foreign_key "thoughts", "contents"
   add_foreign_key "thoughts", "users"
 end

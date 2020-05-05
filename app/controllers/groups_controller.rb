@@ -12,9 +12,7 @@ class GroupsController < ApplicationController
     def create
         @group = Group.create(name: params[:name],
         description: params[:description])
-        @joiner = Joiner.create(user_id: params[:user],
-        group_id: @group.id
-        )
+        # redirect_to "http://localhost:3001/show.html?user=#{params[:user_id]}"
     end 
 
     def destroy
