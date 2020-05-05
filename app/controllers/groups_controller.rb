@@ -1,12 +1,12 @@
 class GroupsController < ApplicationController
     def index
         @groups = Group.all 
-        render json: @groups 
+        render json: @groups, include: :contents
     end 
 
     def show
         @group = Group.find(params[:id])
-        render json: @group, include: :users
+        render json: @group, include: [:users, :contents]
     end 
     
     def create
