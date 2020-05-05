@@ -3,4 +3,6 @@ class JoinersController < ApplicationController
         @joiners = Joiner.all 
         render json: @joiners
     end 
+
+
 end

@@ -12,6 +12,7 @@ class GroupsController < ApplicationController
     def create
         @group = Group.create(name: params[:name],
         description: params[:description])
+        Joiner.new(params[:user_id], @group.id)
         # redirect_to "http://localhost:3001/show.html?user=#{params[:user_id]}"
     end 
 
