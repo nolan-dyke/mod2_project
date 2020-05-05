@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :states
   resources :joiners
   resources :thoughts
   resources :contents

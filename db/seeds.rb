@@ -8,6 +8,7 @@
 
 Joiner.destroy_all
 Thought.destroy_all
+State.destroy_all
 Content.destroy_all
 User.destroy_all
 Group.destroy_all
@@ -29,6 +30,10 @@ content1 = Content.create(message: 'find 3 meetups and mark your calendar with t
 content2 = Content.create(message: 'first prompt: A love letter to Coco', user: nolan, group: writing_pals)
 content3 = Content.create(message: '(60 jumping jacks, 40 situps, and 10 pushups) x2', user: lydia, group: workout_buddies)
 
-thought1 = Thought.create(comment: 'Great idea, Nolan', content: content1, user: lydia)
-thought2 = Thought.create(comment: 'But I only met her yesterday', content: content2, user: lydia)
-thought3 = Thought.create(comment: "let's triple it", content: content3, user: nolan)
+thought1 = Thought.create(comment: 'Great idea!', content: content1, user: lydia)
+thought2 = Thought.create(comment: 'We love writing!', content: content2, user: lydia)
+thought3 = Thought.create(comment: 'Exercise releases endorphins. Endorphins make you happy. Happy people dont kill their husbands.', content: content3, user: nolan)
+
+status1 = State.create(status: 'Not started', user: nolan, content: content1)
+status2 = State.create(status: 'Not started', user: lydia, content: content1)
+status3 = State.create(status: 'In progress', user: nolan, content: content2)
