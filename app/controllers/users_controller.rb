@@ -22,6 +22,7 @@ class UsersController < ApplicationController
         @user = User.create(
             name: params[:name]
         )
+        redirect_to "http://localhost:3001/show.html?user=#{@user}"
     end
 
     def destroy
