@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
     def show
         @group = Group.find(params[:id])
-        render json: @group, include: [:users, :contents]
+        render json: @group, include: [:users, :contents, :joiners]
     end 
     
     def create
