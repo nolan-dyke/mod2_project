@@ -2,10 +2,12 @@ class ContentsController < ApplicationController
 
     def index
         @contents = Content.all
-        render json: @contents
+        render json: @contents, include: :states
     end
     
     def show
+        @content = content.find(params[:id])
+        render json: @content, include: :states
     end
 
     def create

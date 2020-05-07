@@ -1,12 +1,12 @@
 class StatesController < ApplicationController
     def index
         @states = State.all
-        render json: @states
+        render json: @states, include: [:user, :content]
     end
 
     def show
         @state = State.find(params[:id])
-        render json: @state
+        render json: @state, include: [:user, :content] 
     end
 
     def update
