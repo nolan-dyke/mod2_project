@@ -15,6 +15,6 @@ class ContentsController < ApplicationController
             user_id: params[:user_id],
             group_id: params[:group_id]
         )
-        redirect_to "http://localhost:3001/group.html?id=#{params[:group_id]}"
+        redirect_to "http://localhost:3001/group.html?id=#{params[:group_id]}&user=#{params[:user_id]}"
     end
 end

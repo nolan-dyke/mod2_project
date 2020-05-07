@@ -5,7 +5,6 @@ class JoinersController < ApplicationController
     end
 
     def create
-        byebug
         @joiner = Joiner.create(
             user_id: params[:user_id],
             group_id: params[:group_id]
