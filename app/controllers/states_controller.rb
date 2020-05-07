@@ -16,7 +16,7 @@ class StatesController < ApplicationController
             user_id: params[:user_id],
             content_id: params[:content_id]
         )
-        render json: @state
+        redirect_to "http://localhost:3001/group.html?id=#{params[:group_id]}&user=#{params[:current_user]}"
     end
 
     def create
