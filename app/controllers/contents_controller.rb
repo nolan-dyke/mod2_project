@@ -6,7 +6,7 @@ class ContentsController < ApplicationController
     end
     
     def show
-        @content = content.find(params[:id])
+        @content = Content.find(params[:id])
         render json: @content, include: :states
     end
 
