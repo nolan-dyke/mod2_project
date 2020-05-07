@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
         if @user 
-            render json: @user, include: [:groups, :joiners]
+            render json: @user, include: [:groups, :joiners, :states]
         else 
             render json: {message: "We don't have user that matches this name in our database. Try again or create a new user."}
         end
