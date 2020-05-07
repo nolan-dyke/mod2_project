@@ -33,7 +33,3 @@ content3 = Content.create(message: '(60 jumping jacks, 40 situps, and 10 pushups
 thought1 = Thought.create(comment: 'Great idea!', content: content1, user: lydia)
 thought2 = Thought.create(comment: 'We love writing!', content: content2, user: lydia)
 thought3 = Thought.create(comment: 'Exercise releases endorphins. Endorphins make you happy. Happy people dont kill their husbands.', content: content3, user: nolan)
-
-status1 = State.create(status: 'Not started', user: nolan, content: content1)
-status2 = State.create(status: 'Not started', user: lydia, content: content1)
-status3 = State.create(status: 'In progress', user: nolan, content: content2)
