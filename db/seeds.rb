@@ -17,7 +17,7 @@ nolan = User.create(name: "Nolan")
 lydia = User.create(name: "Lydia")
 ahmed = User.create(name: "Ahmed")
 
-professional_development = Group.create(name: 'Professional Developement Group', description:'Network and Learn!')
+professional_development = Group.create(name: 'Professional Development Group', description:'Network and Learn!')
 writing_pals = Group.create(name: 'Writing Pals', description:'Everyday we write 300 words about....')
 workout_buddies = Group.create(name: 'Workout Buddies', description:"Stick to a daily workout schedule")
 walking =Group.create(name: 'Walking Group', description: 'Go for walks')
