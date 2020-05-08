@@ -13,7 +13,7 @@ AccountibiliBuddies is a one-week, fullstack, Mod 2 project. It is an accountabi
 
 ## Video
 
-![walkthrough](/Desktop/accountabilibuddy.mov)
+[walkthrough](https://youtu.be/ECMCJ1QmmPw)
 
 ## Setup
 
